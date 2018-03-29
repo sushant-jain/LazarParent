@@ -1,5 +1,6 @@
 var monthlyReminderCall = require('./monthlyReminderCall.js');
 var emailReminder = require('./emails.js');
+var automaticCall = require('./automaticCall.js')
 
 Parse.Cloud.define("ANMAsendMessage",function(request,response){
 	//require the Twilio module and create a REST client
