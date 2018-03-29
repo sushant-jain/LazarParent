@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LazarParent</string>
+    <string name="title_activity_signup">साइन अप करें</string>
+    <string name="password">पास वर्ड दर्ज करें</string>
+    <string name="ID">M_ID या आधार संख्या दर्ज करें</string>
+    <string name="Aadhar">आधार संख्या दर्ज करें</string>
+    <string name="MID">M_ID दर्ज करें</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="signup">साइन अप करेंं</string>
+    <string name="tosignup">पहली बार प्रवेश? रजिस्टर</string>
+</resources>

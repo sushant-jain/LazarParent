@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">LazarParent</string>
     <string name="title_activity_signup">Sign Up</string>
-
+    <string name="password">Enter Password</string>
+    <string name="ID">Enter M_ID or Aadhar Number</string>
+    <string name="Aadhar">Enter Aadhar Number</string>
+    <string name="MID">Enter M_ID</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="tosignup">First Time Login? Register</string>
 </resources>
