@@ -1,4 +1,4 @@
-Parse.Cloud.define("sendEmail", function(request, response) {
+Parse.Cloud.job("sendEmail", function(request, response) {
 
   // Import SendGrid module and call with your SendGrid API Key
   var sg = require('sendgrid')('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');
