@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LazarParent</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">tdmZYblELna1qEfzXCbWVPkLT6meo8rGBeS6hqFe</string>
+    <string name="back4app_client_key">oAGBmjTOx2Tqn7t74yloKghIX5Y7hTyTejfm89Sf</string>
 </resources>
