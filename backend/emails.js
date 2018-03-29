@@ -13,11 +13,11 @@ Parse.Cloud.job("sendEmail", function(request, response) {
           to: [
             {
               // This field is the "to" in the email
-              email: request.params.toEmail,
+              email: 'utkarshmailing@gmail.com',
             },
           ],
           // This field is the "subject" in the email
-          subject: request.params.subject,
+          subject: 'Test E-mail',
         },
       ],
       // This field contains the "from" information
