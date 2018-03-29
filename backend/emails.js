@@ -37,7 +37,7 @@ Parse.Cloud.job("sendEmail", function(request, response) {
           // Although some email providers may accept text/html
           type: 'text/plain',
           // This field is the body of the email
-          value: request.params.body,
+          value: 'request.params.body',
         },
       ],
     },
