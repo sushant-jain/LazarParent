@@ -44,6 +44,13 @@ public class DetailDisplayActivity extends AppCompatActivity {
         address=findViewById(R.id.tv_adress);
         name=findViewById(R.id.tv_name);
         mother=findViewById(R.id.cv);
+        mother.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DetailDisplayActivity.this, MotherDetailActivity.class);
+                startActivity(intent);
+            }
+        });
 
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
@@ -99,8 +106,9 @@ public class DetailDisplayActivity extends AppCompatActivity {
         recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int i) {
-                Toast.makeText(DetailDisplayActivity.this, childlist.get(i).getAge().toString(), Toast.LENGTH_SHORT).show();
-            }
+                Intent intent = new Intent(DetailDisplayActivity.this, MotherDetailActivity.class);
+                startActivity(intent);
+           }
         }));
 
 
