@@ -24,6 +24,7 @@ android:layout_marginBottom="30dp"
         android:layout_gravity="center"
         android:src="@drawable/ic_launcher_background"
         android:layout_margin="50dp"/>
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_marginBottom="30dp"
@@ -39,7 +40,7 @@ android:layout_marginBottom="30dp"
         android:textSize="15dp"
         android:textColor="@color/colorAccent"
         android:textAlignment="center"
-        android:text="@string/childage"/>
+        android:text="@string/name"/>
         <TextView
             android:id="@+id/tv_age"
             android:layout_width="0dp"
@@ -47,7 +48,7 @@ android:layout_marginBottom="30dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="15dp"
-            android:text="Idhar Age ayega" />
+            android:text="Ayush" />
 </LinearLayout>
 
         </LinearLayout>

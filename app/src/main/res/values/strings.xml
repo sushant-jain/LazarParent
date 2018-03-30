@@ -21,4 +21,6 @@
     <string name="vacinedate">Current Vacination Due</string>
     <string name="vacinename">Vaccination Name</string>
     <string name="childage">Child\'s Age</string>
+    <string name="childname">Name</string>
+    <string name="name">Name</string>
 </resources>

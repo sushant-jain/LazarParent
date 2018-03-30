@@ -16,5 +16,7 @@
     <string name="vacinedate">वर्तमान टीकाकरण नियत तारीख</string>
     <string name="vacinename">टीकाकरण का नाम</string>
     <string name="childage">Child\'s Age</string>
+    <string name="childname">Name</string>
+    <string name="name">Name</string>
 
 </resources>
