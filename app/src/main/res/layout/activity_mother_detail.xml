@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MotherDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="83dp">
+
+        <TextView
+            android:id="@+id/tv_cid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="20dp"
+            android:text="Child ID" />
+
+        <TextView
+            android:id="@+id/tv_bcn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:text="Birth Certificate Number" />
+
+        <TextView
+            android:id="@+id/tv_mid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_cid"
+            android:text="@string/MotherID"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:id="@+id/lastvcndate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="110dp">
+
+            <Button
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lastvaccine" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:id="@+id/tv_lvcndate"
+                android:text="22/11/1996" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lastvcnname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lastvcndate"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lastvaccinename" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:id="@+id/tv_lvcnname"
+                android:text="Hepatitis B" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vcndate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lastvcnname"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="@string/vacinedate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:id="@+id/tv_vcndate"
+                android:text="01/01/11" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vcnname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vcndate"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="@string/vacinename" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:id="@+id/tv_vcnname"
+                android:text="Hepatitis B" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fb_history"
+        android:layout_width="46dp"
+        android:layout_height="50dp"
+        android:baselineAlignBottom="true"
+        android:src="@drawable/ic_history"
+        tools:layout_editor_absoluteX="322dp"
+        tools:layout_editor_absoluteY="449dp" />
+</android.support.constraint.ConstraintLayout>

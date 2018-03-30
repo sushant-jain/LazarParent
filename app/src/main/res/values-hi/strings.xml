@@ -10,4 +10,10 @@
     <string name="signup">साइन अप करेंं</string>
     <string name="tosignup">पहली बार प्रवेश? रजिस्टर</string>
     <string name="children">Children Data</string>
+    <string name="lastvaccine">Last Vacinnation Done</string>
+    <string name="MotherID">Mother ID</string>
+    <string name="lastvaccinename">Last vaccination name</string>
+    <string name="vacinedate">Current Vacination Due</string>
+    <string name="vacinename">Vaccination Name</string>
+
 </resources>

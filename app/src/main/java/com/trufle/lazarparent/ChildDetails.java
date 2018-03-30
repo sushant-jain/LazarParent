@@ -11,6 +11,7 @@ class ChildDetails {
         this.DOB=DOB;
         this.Age=age;
         this.C_ID=C_ID;
+        setAge();
     }
 
     public Integer getAge() {

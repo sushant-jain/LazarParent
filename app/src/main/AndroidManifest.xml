@@ -23,12 +23,12 @@
         </activity>
         <activity
             android:name=".Signup"
-            android:label="@string/title_activity_signup"
-             />
+            android:label="@string/title_activity_signup" />
         <activity
             android:name=".DetailDisplayActivity"
-            android:label="@string/title_activity_detail_display"
-            ></activity>
+            android:label="@string/title_activity_detail_display" />
+        <activity android:name=".MotherDetailActivity" />
+        <activity android:name=".HistoryActivity"></activity>
     </application>
 
 </manifest>
