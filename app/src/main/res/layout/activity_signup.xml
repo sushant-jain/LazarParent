@@ -1,4 +1,4 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fitsSystemWindows="true">
@@ -7,8 +7,9 @@
         android:orientation="vertical"
         android:id="@+id/mainlayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:paddingTop="56dp"
+        android:background="@color/colorPrimary"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
@@ -27,7 +28,8 @@
             <EditText android:id="@+id/MID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
+                android:inputType="text"
+                android:textColor="#ffffff"
                 android:textColorHint="#000000"
                 android:hint="@string/MID"
                  />
@@ -41,7 +43,8 @@
             <EditText android:id="@+id/Aadhar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
+                android:inputType="number"
+                android:textColor="#ffffff"
                 android:textColorHint="#000000"
                 android:hint="@string/Aadhar" />
         </android.support.design.widget.TextInputLayout>
@@ -55,6 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
+                android:textColor="#ffffff"
                 android:textColorHint="#000000"
                 android:hint="@string/password"/>
         </android.support.design.widget.TextInputLayout>
@@ -66,7 +70,9 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:padding="12dp"
+            android:textColor="#ffffff"
+            android:background="@color/colorAccent"
             android:text="@string/signup"/>
 
     </LinearLayout>
-</ScrollView>
+</LinearLayout>
