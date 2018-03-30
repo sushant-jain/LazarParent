@@ -8,4 +8,5 @@
     <string name="login">Login</string>
     <string name="signup">Sign Up</string>
     <string name="tosignup">First Time Login? Register</string>
+    <string name="title_activity_detail_display">DetailDisplayActivity</string>
 </resources>

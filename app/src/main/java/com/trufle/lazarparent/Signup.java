@@ -1,5 +1,6 @@
 package com.trufle.lazarparent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,6 +29,11 @@ public class Signup extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(Signup.this, "Signup Bencho", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(Signup.this, DetailDisplayActivity.class);
+
+                startActivity(intent);
+                finish();
             }
         });
 
