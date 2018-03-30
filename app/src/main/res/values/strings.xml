@@ -5,4 +5,12 @@
     <!-- Change the following strings as required -->
     <string name="back4app_app_id">tdmZYblELna1qEfzXCbWVPkLT6meo8rGBeS6hqFe</string>
     <string name="back4app_client_key">oAGBmjTOx2Tqn7t74yloKghIX5Y7hTyTejfm89Sf</string>
+    <string name="title_activity_signup">Sign Up</string>
+    <string name="password">Enter Password</string>
+    <string name="ID">Enter M_ID or Aadhar Number</string>
+    <string name="Aadhar">Enter Aadhar Number</string>
+    <string name="MID">Enter M_ID</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="tosignup">First Time Login? Register</string>
 </resources>

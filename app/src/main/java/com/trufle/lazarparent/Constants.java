@@ -42,5 +42,10 @@ public class Constants {
             public static final String VACCINE="Vaccine";
             public static final String DUE_DATE="DueDate";
         }
+
+
+    }
+    public static class SharedPreferences{
+        public static final String MID="MID";
     }
 }
