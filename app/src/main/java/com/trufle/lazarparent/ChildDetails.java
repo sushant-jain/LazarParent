@@ -11,6 +11,7 @@ import java.util.Date;
 class ChildDetails {
     Date DOB;
     ParseObject ChildObject;
+    String Name;
 
     public ChildDetails(Date DOB,Integer age, String C_ID)
     {
@@ -25,6 +26,7 @@ class ChildDetails {
         DOB=ChilObj.getDate(Constants.Parse.Child.DOB);
         C_ID=ChilObj.getObjectId();
         Age=calculateAge(ChilObj.getDate(Constants.Parse.Child.DOB));
+        Name=ChilObj.getString(Constants.Parse.Child.NAME);
 
     }
 

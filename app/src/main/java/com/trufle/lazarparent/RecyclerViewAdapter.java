@@ -32,7 +32,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         ChildDetails cm = childModel.get(position);
-        holder.abc.setText(cm.getAge().toString());
+        holder.abc.setText(cm.Name);
 
     }
 

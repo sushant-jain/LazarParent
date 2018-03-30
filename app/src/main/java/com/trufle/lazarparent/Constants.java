@@ -28,6 +28,7 @@ public class Constants {
             public static final String MOTHER_ID="Mother";
             public static final String DOB="DOB";
             public static final String BCN="BCN";
+            public static final String NAME="Name";
         }
 
         public static class Transactions{
