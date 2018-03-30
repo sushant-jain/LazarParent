@@ -9,4 +9,5 @@
     <string name="login">लॉग इन करें</string>
     <string name="signup">साइन अप करेंं</string>
     <string name="tosignup">पहली बार प्रवेश? रजिस्टर</string>
+    <string name="children">Children Data</string>
 </resources>
