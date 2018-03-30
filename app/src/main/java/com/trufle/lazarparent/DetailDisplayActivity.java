@@ -18,13 +18,15 @@ import java.util.Date;
 
 public class DetailDisplayActivity extends AppCompatActivity {
 
-    ArrayList<ChildDetails> childlist = null;
+    ArrayList<ChildDetails> childlist = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_display);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setTitle("Family Details");
+
+
 
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         childlist=new ArrayList<ChildDetails>();
@@ -34,6 +36,7 @@ public class DetailDisplayActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(cLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(cAdapter);
+
 
         recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, new RecyclerItemClickListener.OnItemClickListener() {
             @Override

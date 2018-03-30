@@ -42,15 +42,15 @@ public class Signup extends AppCompatActivity {
                         }else{
                             Toast.makeText(Signup.this, "SignUp Succesfull", Toast.LENGTH_SHORT).show();
                             PreferenceManager.getDefaultSharedPreferences(Signup.this).edit().putString(Constants.SharedPreferences.MID,mid.getText().toString()).apply();
+                            Intent intent = new Intent(Signup.this, DetailDisplayActivity.class);
+
+                            startActivity(intent);
+                            finish();
                         }
                     }
                 });
-                Toast.makeText(Signup.this, "Signup Bencho", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(Signup.this, DetailDisplayActivity.class);
 
-                startActivity(intent);
-                finish();
             }
         });
 
