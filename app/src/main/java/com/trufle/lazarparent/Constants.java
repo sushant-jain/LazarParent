@@ -47,5 +47,6 @@ public class Constants {
     }
     public static class SharedPreferences{
         public static final String MID="MID";
+        public static final String DEFAULT="KeyNotFound";
     }
 }

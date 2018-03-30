@@ -55,7 +55,11 @@ public class MainActivity extends AppCompatActivity {
                                     CustomProgressDialog.dismissCustomDialog();
                                     if(e==null){
                                         Toast.makeText(MainActivity.this, "Logged In", Toast.LENGTH_SHORT).show();
-                                        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putString(Constants.SharedPreferences.MID,object.getString(Constants.Parse.OBJECT_ID)).apply();
+                                        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putString(Constants.SharedPreferences.MID,object.getObjectId()).apply();
+                                        Intent intent = new Intent(MainActivity.this, DetailDisplayActivity.class);
+
+                                        startActivity(intent);
+                                        finish();
                                     }else{
                                         e.printStackTrace();
                                         Toast.makeText(MainActivity.this,"Error",Toast.LENGTH_SHORT).show();
@@ -77,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
                                                 if(e==null){
                                                     Toast.makeText(MainActivity.this, "Logged In", Toast.LENGTH_SHORT).show();
                                                     PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putString(Constants.SharedPreferences.MID,mid.getText().toString()).apply();
+
+                                                    Intent intent = new Intent(MainActivity.this, DetailDisplayActivity.class);
+
+                                                    startActivity(intent);
+                                                    finish();
+
                                                 }else{
                                                     e.printStackTrace();
                                                     Toast.makeText(MainActivity.this, "Error Logging In", Toast.LENGTH_SHORT).show();
