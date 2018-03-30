@@ -48,6 +48,8 @@ public class DetailDisplayActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DetailDisplayActivity.this, MotherDetailActivity.class);
+                intent.putExtra(MotherDetailActivity.INTENT_SEL,MotherDetailActivity.MOTHER_SEL);
+                intent.putExtra(MotherDetailActivity.PERSON,motherObj.getObjectId());
                 startActivity(intent);
             }
         });
@@ -107,6 +109,8 @@ public class DetailDisplayActivity extends AppCompatActivity {
             @Override
             public void onItemClick(View view, int i) {
                 Intent intent = new Intent(DetailDisplayActivity.this, MotherDetailActivity.class);
+                intent.putExtra(MotherDetailActivity.INTENT_SEL,MotherDetailActivity.CHILD_SEL);
+                intent.putExtra(MotherDetailActivity.PERSON,childlist.get(i).ChildObject.getObjectId());
                 startActivity(intent);
            }
         }));

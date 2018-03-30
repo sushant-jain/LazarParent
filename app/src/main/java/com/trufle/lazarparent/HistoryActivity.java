@@ -4,20 +4,35 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+
+import java.util.List;
+
 public class HistoryActivity extends AppCompatActivity {
 
-    String[] vaccine ={
-            "Hepatitis","Polio",
-            "Cancer","Measles"
-    };
+    String[] vaccine;
 
-    String[] duedate ={
-            "22/11/1196","22/11/1196","22/11/1196","22/11/1196"
-    };
 
-    String[] donedate ={
-            "22/11/1196","22/11/1196","22/11/1196","22/11/1196"
-    };
+
+
+    String[] duedate;
+
+
+
+
+
+    String[] donedate;
+
+
+
+
+
+    public static final String T_v="Transactions_v";
+    public static final String T_due="Tdue";
+    public static final String T_done="Tdone";
 
     ListView list;
 
@@ -26,8 +41,14 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        MyListAdapter adapter=new MyListAdapter(this, vaccine, duedate,donedate);
+        vaccine = getIntent().getStringArrayExtra(T_v);
+        duedate = getIntent().getStringArrayExtra(T_due);
+        donedate = getIntent().getStringArrayExtra(T_done);
+        MyListAdapter adapter=new MyListAdapter(HistoryActivity.this, vaccine, duedate,donedate);
         list=(ListView)findViewById(R.id.lv_list);
         list.setAdapter(adapter);
+
+
+
     }
 }

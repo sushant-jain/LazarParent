@@ -31,6 +31,7 @@ public class Constants {
         }
 
         public static class Transactions{
+            public static final String TABLE_NAME="Transactions";
             public static final String PERSON="Person";
             public static final String VACCINE="Vaccine";
             public static final String DONE_DATE="DoneDate";
@@ -38,6 +39,7 @@ public class Constants {
         }
 
         public static class Pending{
+            public static final String TABLE_NAME="Pending";
             public static final String  PERSON="Person";
             public static final String VACCINE="Vaccine";
             public static final String DUE_DATE="DueDate";

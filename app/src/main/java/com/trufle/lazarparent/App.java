@@ -24,17 +24,24 @@ public class App extends Application {
         Parse.initialize(this);
 
 //        ParseObject po=new ParseObject(Constants.Parse.Mother.TABLE_NAME);
-//        po.put(Constants.Parse.Mother.AADHAR_MOTHER,"111");
-//        po.put(Constants.Parse.Mother.NAME_MOTHER,"aaa");
-//        po.put(Constants.Parse.Mother.ADDRESS,"add");
+//        po.put(Constants.Parse.Mother.AADHAR_MOTHER,"112");
+//        po.put(Constants.Parse.Mother.NAME_MOTHER,"aaab");
+//        po.put(Constants.Parse.Mother.ADDRESS,"addr");
 //        po.saveInBackground();
 //
-//        ParseObject poc=new ParseObject(Constants.Parse.Child.TABLE_NAME);
-//        poc.put(Constants.Parse.Child.DOB, Calendar.getInstance().getTime());
-//        poc.put(Constants.Parse.Child.BCN,"111");
-//        poc.put(Constants.Parse.Child.MOTHER_ID,po);
-
+//        ParseObject poc=new ParseObject(Constants.Parse.Transactions.TABLE_NAME);
+//        poc.put(Constants.Parse.Transactions.VACCINE,"abc");
+//        poc.put(Constants.Parse.Transactions.DONE_DATE,Calendar.getInstance().getTime());
+//        poc.put(Constants.Parse.Transactions.DUE_DATE,Calendar.getInstance().getTime());
+//        poc.put(Constants.Parse.Transactions.PERSON,po);
+//
 //        poc.saveInBackground();
+//
+//        ParseObject pod=new ParseObject(Constants.Parse.Pending.TABLE_NAME);
+//        pod.put(Constants.Parse.Pending.VACCINE,"qwe");
+//        pod.put(Constants.Parse.Pending.DUE_DATE,Calendar.getInstance().getTime());
+//        pod.put(Constants.Parse.Pending.PERSON,po);
+//        pod.saveInBackground();
 
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
             @Override
