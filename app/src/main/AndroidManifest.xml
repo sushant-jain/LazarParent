@@ -45,7 +45,11 @@
         <activity
             android:name=".Signup"
             android:label="@string/title_activity_signup"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+             />
+        <activity
+            android:name=".DetailDisplayActivity"
+            android:label="@string/title_activity_detail_display"
+            ></activity>
     </application>
 
 </manifest>

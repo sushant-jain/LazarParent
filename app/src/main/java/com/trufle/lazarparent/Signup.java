@@ -1,5 +1,6 @@
 package com.trufle.lazarparent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
@@ -44,6 +45,12 @@ public class Signup extends AppCompatActivity {
                         }
                     }
                 });
+                Toast.makeText(Signup.this, "Signup Bencho", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(Signup.this, DetailDisplayActivity.class);
+
+                startActivity(intent);
+                finish();
             }
         });
 
