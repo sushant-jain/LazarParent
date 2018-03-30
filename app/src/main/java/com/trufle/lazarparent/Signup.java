@@ -32,9 +32,11 @@ public class Signup extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                CustomProgressDialog.showCustomDialog(Signup.this);
                 SignUp.signUp(aadhar.getText().toString(), mid.getText().toString(), pass.getText().toString(), new SignUp.OnSignUpCompletedListener() {
                     @Override
                     public void onSignUpCompleted(int status) {
+                        CustomProgressDialog.dismissCustomDialog();
                         if(status==SignUp.MID_NOT_MATCH){
                             Toast.makeText(Signup.this, "MId and aadhar don't match", Toast.LENGTH_SHORT).show();
                         }else if(status==SignUp.SIGNUPFAILED){

@@ -16,6 +16,7 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -109,34 +110,37 @@ public class MotherDetailActivity extends AppCompatActivity {
             public void done(List<ParseObject> objects, ParseException e) {
                 CustomProgressDialog.dismissCustomDialog();
                 if(e==null) {
-                    tAL= (ArrayList<ParseObject>) objects;
-                    vaccine=new String[objects.size()];
-                    duedate=new String[objects.size()];
-                    donedate=new String[objects.size()];
-                    for(int i=0;i<objects.size();i++){
-                        vaccine[i]=objects.get(i).getString(Constants.Parse.Transactions.VACCINE);
-                        duedate[i]=objects.get(i).getDate(Constants.Parse.Transactions.DUE_DATE).toString();
-                        donedate[i]=objects.get(i).getDate(Constants.Parse.Transactions.DONE_DATE).toString();
-                    }
-                    lastvcndate.setText(objects.get(0).getDate(Constants.Parse.Transactions.DONE_DATE).toString());
-                    lastvcnname.setText(objects.get(0).getString(Constants.Parse.Transactions.VACCINE));
-
-                    ParseQuery<ParseObject> pendingQuery = ParseQuery.getQuery(Constants.Parse.Pending.TABLE_NAME);
-                    pendingQuery.whereEqualTo(Constants.Parse.Pending.PERSON, person);
-                    CustomProgressDialog.showCustomDialog(MotherDetailActivity.this);
-
-                    pendingQuery.getFirstInBackground(new GetCallback<ParseObject>() {
-                        @Override
-                        public void done(ParseObject object, ParseException e) {
-                            CustomProgressDialog.dismissCustomDialog();
-                            if(e==null){
-                                vcndate.setText(object.getDate(Constants.Parse.Pending.DUE_DATE).toString());
-                                vcnname.setText(object.getString(Constants.Parse.Pending.VACCINE));
-                            }else{
-                                e.printStackTrace();
-                            }
+                    if(objects.size()>0) {
+                        tAL = (ArrayList<ParseObject>) objects;
+                        vaccine = new String[objects.size()];
+                        duedate = new String[objects.size()];
+                        donedate = new String[objects.size()];
+                        for (int i = 0; i < objects.size(); i++) {
+                            vaccine[i] = objects.get(i).getString(Constants.Parse.Transactions.VACCINE);
+                            duedate[i] = new SimpleDateFormat("dd/MM/yyyy").format(objects.get(i).getDate(Constants.Parse.Transactions.DUE_DATE));
+                            donedate[i] = new SimpleDateFormat("dd/MM/yyyy").format(objects.get(i).getDate(Constants.Parse.Transactions.DONE_DATE));
                         }
-                    });
+                        lastvcndate.setText(new SimpleDateFormat("dd/MM/yyyy").format(objects.get(0).getDate(Constants.Parse.Transactions.DONE_DATE)));
+                        lastvcnname.setText(objects.get(0).getString(Constants.Parse.Transactions.VACCINE));
+
+                        ParseQuery<ParseObject> pendingQuery = ParseQuery.getQuery(Constants.Parse.Pending.TABLE_NAME);
+                        pendingQuery.whereEqualTo(Constants.Parse.Pending.PERSON, person);
+                        CustomProgressDialog.showCustomDialog(MotherDetailActivity.this);
+
+                        pendingQuery.getFirstInBackground(new GetCallback<ParseObject>() {
+                                                              @Override
+                                                              public void done(ParseObject object, ParseException e) {
+                                                                  CustomProgressDialog.dismissCustomDialog();
+                                                                  if (e == null) {
+                                                                      vcndate.setText(new SimpleDateFormat("dd/MM/yyyy").format(object.getDate(Constants.Parse.Pending.DUE_DATE)));
+                                                                      vcnname.setText(object.getString(Constants.Parse.Pending.VACCINE));
+                                                                  } else {
+                                                                      e.printStackTrace();
+                                                                  }
+                                                              }
+                                                          }
+                        );
+                    }
                 }else{
                     e.printStackTrace();
                 }

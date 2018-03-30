@@ -25,22 +25,26 @@ public class SignUp {
         pq.getInBackground(mId, new GetCallback<ParseObject>() {
             @Override
             public void done(ParseObject object, ParseException e) {
-                if(object.getString(Constants.Parse.Mother.AADHAR_MOTHER).equals(aadhar)){
-                    ParseUser pu=new ParseUser();
-                    pu.setUsername(aadhar);
-                    pu.setPassword(mId);
-                    pu.signUpInBackground(new SignUpCallback() {
-                        @Override
-                        public void done(ParseException e) {
-                            if(e==null){
-                                onSignUpCompletedListener.onSignUpCompleted(SIGNUPCOMPLETED);
-                            }else{
-                                onSignUpCompletedListener.onSignUpCompleted(SIGNUPFAILED);
+                if(e==null) {
+                    if (object.getString(Constants.Parse.Mother.AADHAR_MOTHER).equals(aadhar)) {
+                        ParseUser pu = new ParseUser();
+                        pu.setUsername(aadhar);
+                        pu.setPassword(mId);
+                        pu.signUpInBackground(new SignUpCallback() {
+                            @Override
+                            public void done(ParseException e) {
+                                if (e == null) {
+                                    onSignUpCompletedListener.onSignUpCompleted(SIGNUPCOMPLETED);
+                                } else {
+                                    onSignUpCompletedListener.onSignUpCompleted(SIGNUPFAILED);
+                                }
                             }
-                        }
-                    });
+                        });
+                    } else {
+                        onSignUpCompletedListener.onSignUpCompleted(MID_NOT_MATCH);
+                    }
                 }else{
-                    onSignUpCompletedListener.onSignUpCompleted(MID_NOT_MATCH);
+                    onSignUpCompletedListener.onSignUpCompleted(SIGNUPFAILED);
                 }
             }
         });

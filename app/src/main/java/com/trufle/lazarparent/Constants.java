@@ -45,6 +45,13 @@ public class Constants {
             public static final String DUE_DATE="DueDate";
         }
 
+        public static class Anma{
+            public static final String TABLE_NAME="Anma";
+            public static final String ANMA_NAME="Name";
+            public static final String LOC_ID="LocId";
+            public static final String LOC_NAME="LocName";
+        }
+
 
     }
     public static class SharedPreferences{
