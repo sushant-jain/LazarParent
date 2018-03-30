@@ -4,29 +4,55 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+android:layout_marginBottom="30dp"
+    android:layout_margin="5dp"
     android:id="@+id/abcd">
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:elevation="15dp"
+        android:fadingEdge="vertical"
         android:id="@+id/cv">
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/tv_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="74dp"
-        android:text="Idhar ayea child ka age" />
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
     <android.support.design.widget.FloatingActionButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/fb_icon"
+        android:layout_gravity="center"
         android:src="@drawable/ic_launcher_background"
         android:layout_margin="50dp"/>
-        </RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginBottom="30dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+
+        android:textSize="15dp"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:text="@string/name"/>
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="0dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:text="Ayush" />
+</LinearLayout>
+
+        </LinearLayout>
+
     </android.support.v7.widget.CardView>
-</RelativeLayout>
+
+    </RelativeLayout>
