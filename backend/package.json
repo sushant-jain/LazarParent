@@ -1,0 +1,25 @@
+{
+  "name": "lazarparent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sushant-jain/LazarParent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sushant-jain/LazarParent/issues"
+  },
+  "homepage": "https://github.com/sushant-jain/LazarParent#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "pdfmake": "^0.1.36",
+    "request": "^2.85.0"
+  }
+}
