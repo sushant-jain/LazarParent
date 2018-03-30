@@ -46,7 +46,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public TextView abc;
         public MyViewHolder(View view) {
             super(view);
-            abc =  view.findViewById();
+            abc =  view.findViewById(R.id.tv_age);
 
         }
     }
