@@ -29,6 +29,7 @@ public class MotherDetailActivity extends AppCompatActivity {
     public static final int CHILD_SEL=2;
     public static final String INTENT_SEL="IntentSel";
     public static final String PERSON="person";
+    int f=0;
 
     String[] vaccine;
 
@@ -89,6 +90,15 @@ public class MotherDetailActivity extends AppCompatActivity {
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(f==0){
+                    vaccine=new String[1];
+                    donedate=new String[1];
+                    duedate=new String[1];
+
+                    vaccine[0]="No Records Found";
+                    donedate[0]="N/A";
+                    duedate[0]="N/A";
+                }
                 Intent intent = new Intent(MotherDetailActivity.this, HistoryActivity.class);
                 intent.putExtra(PERSON,getIntent().getStringExtra(PERSON));
                 intent.putExtra(HistoryActivity.T_v,vaccine);
@@ -111,6 +121,7 @@ public class MotherDetailActivity extends AppCompatActivity {
                 CustomProgressDialog.dismissCustomDialog();
                 if(e==null) {
                     if(objects.size()>0) {
+                        f=1;
                         tAL = (ArrayList<ParseObject>) objects;
                         vaccine = new String[objects.size()];
                         duedate = new String[objects.size()];

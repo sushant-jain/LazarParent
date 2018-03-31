@@ -31,4 +31,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'com.parse:parse-android:1.15.8'
     compile 'com.android.support:design:26.1.0'
+    compile 'ai.api:sdk:2.0.7@aar'
+    compile 'ai.api:libai:1.6.12'
 }

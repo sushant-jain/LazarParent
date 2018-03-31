@@ -43,6 +43,13 @@ public class DetailDisplayActivity extends AppCompatActivity {
         ActionBar actionBar=getSupportActionBar();
         actionBar.setTitle("Family Details");
         address=findViewById(R.id.tv_adress);
+        findViewById(R.id.bt_chatbot).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DetailDisplayActivity.this, ChatbotActivity.class));
+
+            }
+        });
         name=findViewById(R.id.tv_name);
         mother=findViewById(R.id.cv);
         mother.setOnClickListener(new View.OnClickListener() {

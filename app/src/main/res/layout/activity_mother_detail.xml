@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:id="@+id/tv_lvcndate"
-                android:text="22/11/1996" />
+                android:text="N/A" />
 
         </LinearLayout>
 
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:id="@+id/tv_lvcnname"
-                android:text="Hepatitis B" />
+                android:text="No record exists" />
 
         </LinearLayout>
 
@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:id="@+id/tv_vcndate"
-                android:text="01/01/11" />
+                android:text="N/A" />
 
         </LinearLayout>
 
@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:id="@+id/tv_vcnname"
-                android:text="Hepatitis B" />
+                android:text="No Record exists" />
 
         </LinearLayout>
 
