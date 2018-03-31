@@ -1,17 +1,9 @@
 // Importing express
 var express = require('express');
 var request = require("request");
-// var jsPDF = require('jspdf');
-var pdfMake = require('pdfmake');
-var pdfMakePrinter = require('./node_modules/pdfmake/src/printer');
-var printer = new pdfMakePrinter(fontDescriptors);
-var doc = printer.createPdfKitDocument(pdfDoc);
-// var pdfFonts = require('virtual-fs');
-// import pdfMake from 'pdfmake/build/pdfmake.js';
-// import pdfFonts from 'pdfmake/build/vfs_fonts.js';
-
-// pdfMake.vfs = pdfFonts.pdfMake.vfs;
-
+PDFDocument = require('pdfkit');
+blobStream  = require('blob-stream')
+fs = require('fs')
 var route = express.Router();
 
 
@@ -67,51 +59,22 @@ route.get('/genPDF', function(req, res) {
 		valuePDF = JSON.parse(body);
 		valuePDF = valuePDF.results;
 		console.log(valuePDF)
-		// var doc = new jsPDF();
-	  // valuePDF.forEach(function(val, i){
-	  //     doc.text(20, 10 + (i * 10),
-		// 				"LocationID: " + val.LocationID +
-	  //         "Father's Name: " + val.NameFather +
-	  //         "Mother's Name: " + val.NameMother +
-		// 				"Phone: " + val.Phone +
-		// 				"Address" + val.Address +
-		// 				"Mother's Aadhar: " + val.AdharMother +
-		// 				"Email: " + val.Email
-		// 			);
-	  // });
-	  // doc.save('Test.pdf');
-		const document = { content: [{text: 'Area-Wise Data', fontStyle: 15, lineHeight: 2}] }
-		valuePDF.forEach(val => {
-		    document.content.push({
-		        columns: [
-		            { text: 'LocationID', width: 60 },
-		            { text: ':', width: 10 },
-		            { text: val.LocationID, width: 50 },
-		            { text: 'Fathers Name:', width: 60 },
-		            { text: ':', width: 10 },
-								{ text: val.NameFather, width: 50},
-								{ text: 'Mothers Name:', width: 60 },
-		            { text: ':', width: 10 },
-		            { text: val.NameMother, width: 50 },
-		            { text: 'Phone:', width: 60 },
-		            {text: ':', width: 10 },
-								{ text: val.Phone, width: 50},
-								{ text: 'Address:', width: 60 },
-		            { text: ':', width: 10 },
-		            { text: val.Address, width: 50 },
-		            { text: 'Mothers Aadhar:', width: 60 },
-		            {text: ':', width: 10 },
-								{ text: val.AdharMother, width: 50},
-								{ text: 'Email:', width: 60 },
-		            {text: ':', width: 10 },
-								{ text: val.Email, width: 50}
-		        ],
-		        lineHeight: 2
-		    });
+		doc = new PDFDocument;
+		doc.pipe(fs.createWriteStream('report.pdf'));
+
+		valuePDF.forEach(function(val, i){
+			doc.text("LocationID: " + val.LocationID +
+			" Father's Name: " + val.NameFather +
+			" Mother's Name: " + val.NameMother +
+						" Phone: " + val.Phone +
+						" Address" + val.Address +
+						" Mother's Aadhar: " + val.AdharMother +
+						" Email: " + val.Email, 20, 10 + (i * 10)
+						);
 		});
-		pdfMake.createPdf(document).download();
+		doc.end();
+		res.send("PDF Saved at backend/report.pdf!");
 	});
-	res.send("Done!");
 });
 
 
