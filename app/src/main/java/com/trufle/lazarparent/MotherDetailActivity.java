@@ -54,8 +54,8 @@ public class MotherDetailActivity extends AppCompatActivity {
         tvMid=findViewById(R.id.tv_mid);
 
         if(getIntent().getIntExtra(INTENT_SEL,200)==MOTHER_SEL){
-            tvChild.setVisibility(View.GONE);
-            tvBcNo.setVisibility(View.GONE);
+            tvChild.setVisibility(View.INVISIBLE);
+            tvBcNo.setVisibility(View.INVISIBLE);
             ParseQuery<ParseObject> pq=ParseQuery.getQuery(Constants.Parse.Mother.TABLE_NAME);
             CustomProgressDialog.showCustomDialog(MotherDetailActivity.this);
             pq.getInBackground(getIntent().getStringExtra(PERSON), new GetCallback<ParseObject>() {

@@ -14,6 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +32,7 @@ import java.util.List;
 public class DetailDisplayActivity extends AppCompatActivity {
 
     ArrayList<ChildDetails> childlist = new ArrayList<>();
-   CardView mother;
+   LinearLayout mother;
     TextView name, address;
     ParseObject motherObj;
 

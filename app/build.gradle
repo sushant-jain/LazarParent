@@ -33,4 +33,7 @@ dependencies {
     compile 'com.android.support:design:26.1.0'
     compile 'ai.api:sdk:2.0.7@aar'
     compile 'ai.api:libai:1.6.12'
+    compile 'com.google.code.gson:gson:2.2.4'
+
+
 }
