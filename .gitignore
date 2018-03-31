@@ -63,4 +63,3 @@ fastlane/test_output
 fastlane/readme.md
 
 /node_modules
-/backend/node_modules
